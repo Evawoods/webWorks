@@ -1,0 +1,26 @@
+## **Part One: Solidify Terminology**
+
+In your own terms, define the following terms:
+
+- What is HTTP? Stands for Hypertext Transfer Protocol and it's how browers and servers communicate
+- What is a URL? A link to a website comprised of the protocol, hostname, port, resource, and query string
+- What is DNS? Stands for domain name service/system. It changes the hostname into an IP Address
+- What is a query string? a query string is a set of key, value pairs that provide more information on what you are looking for 
+- What are two HTTP verbs and how are they different? GET: get data from the server POST: send data to the server
+- What is an HTTP request? An HTTP request is what gets sent from the browser to the server
+- What is an HTTP response? An HTTP respose is what the server sends back to the browser which is then rendered on the browser.
+- What is an HTTP header? Give a couple examples of request and response headers you have seen. An HTTP header gives more information about the request/response. Examples: host, cookies, last-modified
+- What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser? The browser resolves the url into an IP address using DNS. The browser then makes a request to the IP address using HTTP headers. The server then responds (usually with a 200 code). The browser then makes a DOM from the files (HTML, JS, CSS, etc.). Any further requests are handled through separate HTTP requestions and responses are sent from the server.
+
+Part 2:
+1. Using ***curl***, make a ***GET*** request to the *icanhazdadjoke.com* API to find all jokes involving the word “pirate”
+curl "https://icanhazdadjoke.com/search?term=pirate"
+2. Use ***dig*** to find what the IP address is for *icanhazdadjoke.com*
+dig "icanhazdadjoke.com"
+;; ANSWER SECTION:
+icanhazdadjoke.com.	300	IN	A	104.21.66.15
+icanhazdadjoke.com.	300	IN	A	172.67.198.173
+
+3. Make a simple web page and serve it using ***python3 -m http.server***. Visit the page in a browser.
+type python3 -m http.server into the terminal. In the browser type https://localhost:8000 and open the file.
+
